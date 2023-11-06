@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilai uang & Berat Badan ideal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Membaca nilai uang & berat badan ideal</h2>
+    <p>pilih menu berikut untuk memilih program</p>
+    
+    <div class="tab">
+        <button style="color:indigo" class="tablinks" onclick="openShape('PersegiPanjang')" id="defaultOpen">membaca nilai uang</button>
+        <button style="color:indianred" class="tablinks" onclick="openShape('Segitiga')">menghitung berat badan yang ideal</button>
+    </div>
+
+    <div id="PersegiPanjang" class="tabcontent">
+        <h2>membaca nilai uang (rupiah) dalam kelipatan 25</h2>
+
+            <form class="inputan_persegi">
+                <label for="nilai_uang">Masukan Nilai Uang :</label>
+                <input type="number" id="nilai_uang" name="nilai_uang" placeholder="Nilai dalam Rp.."> <br>
+                
+                <input class="hitung" type="button" value="Hitung" onclick="hitungUang()">
+                <input class="reset" type="button" value="Reset" onclick="resetForm()"> <br>
+
+                <label for="hasil">Hasil:</label><br>
+                <textarea id="hasil" name="hasil" style="height:200px" placeholder="hasil.." readonly></textarea>
+            </form>
+
+    </div>
+
+    <div id="Segitiga" class="tabcontent" style="display: none;">
+        <h2>menghitung berat badan yang ideal berdasarkan dengan tinggi badan seseorang</h2>
+
+        <form>
+            <label for="tinggiBadan">Masukan tinggi badan Anda dalam cm :</label> <br>
+            <input type="number" id="tinggiBadan" name="tinggiBadan" placeholder="tinggi badan(cm)..." style="width: 350px;"> <br>
+
+            <input class="hitung" type="button" value="Hitung" onclick="hitungBerat()">
+            <input class="reset" type="button" value="Reset" onclick="resetForm()"><br>
+
+            <label for="hasil2">Jadi berat badan ideal untuk Anda adalah :</label><br>
+            <input type="text" id="hasil2" name="hasil2" placeholder="berat ideal adalah..." readonly style="width: 350px;">
+        </form>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
